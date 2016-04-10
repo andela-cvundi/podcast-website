@@ -7,7 +7,7 @@
             <% @users.each do |user| %>
                 <%=  link_to user do %>
                     <li>
-                        <img src="http://goo.gl/8sorZR" alt="Narwhals podcast">
+                        <%= image_tag user.thumbnail.url(:medium) %>
                         <div class="podcast_overview">
                             <h2><%= user.title %></h2>
                             <p class="episode_count">One Episode</p>

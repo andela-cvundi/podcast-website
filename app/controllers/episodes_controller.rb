@@ -1,6 +1,6 @@
 class EpisodesController < ApplicationController
   before_action :authenticate_user!, except: [:show]
-  before_action :authorized_user
+  before_action :authorized_user, except: [:show]
   before_action :find_user
   before_action :find_episode, only: [:show, :edit, :update, :destroy]
   
@@ -42,7 +42,7 @@ class EpisodesController < ApplicationController
   private 
   
   def episode_params
-    params.require(:episode).permit(:title, :description)
+    params.require(:episode).permit(:title, :description, :episode_thumbnail)
   end
   
   def find_user
