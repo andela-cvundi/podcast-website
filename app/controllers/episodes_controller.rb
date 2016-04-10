@@ -1,4 +1,6 @@
 class EpisodesController < ApplicationController
+  before_action :authenticate_user!, except: [:show]
+  before_action :authorized_user
   before_action :find_user
   before_action :find_episode, only: [:show, :edit, :update, :destroy]
   
@@ -49,5 +51,12 @@ class EpisodesController < ApplicationController
   
   def find_episode
     @episode = Episode.find(params[:id])
+  end
+  
+  def authorized_user
+    @user = User.find(params[:user_id])
+    if current_user != @user
+      redirect_to root_path, notice: "You are not allowed to perform this action"
+    end
   end
 end

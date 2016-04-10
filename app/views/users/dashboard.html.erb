@@ -36,7 +36,7 @@
                         </p>
                         <div class="authorize_links">
                             <%= link_to "Edit", edit_user_episode_path(@user, episode) %>
-                            <%= link_to "Delete", user_episodes_path(@user, episode), method: :delete, data: {confirm: "Are you sure?"} %>
+                            <%= link_to "Delete", user_episode_path(@user, episode), method: :delete, data: {confirm: "Are you sure?"} %>
                         </div>
                     </div>
                 </li>

@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     end
     
     def dashboard
+        @episodes = current_user.episodes.order("created_at DESC")
     end
     
     private
