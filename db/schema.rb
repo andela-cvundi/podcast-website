@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160410152001) do
+ActiveRecord::Schema.define(version: 20160411070756) do
 
   create_table "episodes", force: :cascade do |t|
     t.string   "title"
@@ -23,6 +23,10 @@ ActiveRecord::Schema.define(version: 20160410152001) do
     t.string   "episode_thumbnail_content_type"
     t.integer  "episode_thumbnail_file_size"
     t.datetime "episode_thumbnail_updated_at"
+    t.string   "audio_file_name"
+    t.string   "audio_content_type"
+    t.integer  "audio_file_size"
+    t.datetime "audio_updated_at"
   end
 
   add_index "episodes", ["user_id"], name: "index_episodes_on_user_id"
