@@ -15,6 +15,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #user authentication
 gem 'devise', '~> 3.5'
 
+#pagination 
+gem 'will_paginate', '~> 3.1'
+
 #image uploading
 gem 'paperclip', '~> 4.3'
 
