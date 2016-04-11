@@ -12,12 +12,26 @@
         <%= render 'layouts/header' %>
     <% end %>
 <% if notice %> 
-    <p class="notice"><%= notice %></p>
+    <div id="notice_wrapper">
+        <p class="notice"><%= notice %></p>
+    </div>
 <% elsif alert %>
-    <p class="alert"><%= alert %></p>
+    <div id="notice_wrapper">
+        <p class="alert"><%= alert %></p>
+    </div>
 <% end %>
 
 <%= yield %>
+
+<script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('#notice_wrapper').fadeOut('slow', function() {
+                $this.remove();
+            })
+        }, 4500)
+    });
+</script>
 
 </body>
 </html>
