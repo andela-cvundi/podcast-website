@@ -264,5 +264,5 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth's
   
   config.omniauth :facebook, '520544998147246', '838f1352f3f3ea03fadc2bc8352fb14d',
-                callback_url: 'https://podcast-network-vickris.c9users.io/auth/facebook/callback', scope: 'email', info_fields: 'email,name'
+                callback_url: 'https://podcast-network-vickris.c9users.io/users/auth/facebook/callback', scope: 'email', info_fields: 'email,name'
 end
