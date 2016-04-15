@@ -24,6 +24,10 @@ gem 'paperclip', '~> 4.3'
 #for storing assets to AWS
 gem 'aws-sdk', '< 2.0'
 
+#authenticate with facebook
+gem 'omniauth', '~> 1.3'
+gem 'omniauth-facebook'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
